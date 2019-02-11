@@ -5,6 +5,14 @@
     <title>Event!!</title>
     <link href="css/default.css" rel="stylesheet" />
     <script type="text/javascript">
+        function MouseRollover(MyImage) {
+            MyImage.src = "pic2.jpg";
+
+        }
+        function MouseOut(MyImage) {
+            MyImage.src = "pic.jpg";
+        }
+
         function trigger() {
             document.getElementById("hover").addEventListener("mouseover", popup);
             function popup() {
@@ -25,6 +33,8 @@
     </style>
 </head>
 <body onload="trigger();">
-   <img src ="pic.jpg"/>
+    <div align ="center"></div>
+
+   <img src ="pic.jpg" border = "0px" width = "650px" height = "550px" onmouseover=" MouseRollover(this)" onMouseOut="MouseOut(this)"/>
 </body>
 </html>
